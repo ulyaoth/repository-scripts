@@ -38,7 +38,7 @@ startbuild()
 }
 
 # Set required variables.
-instance_type="t2.micro"
+instance_type="c4.large"
 ownersid="035742204304"
 package=""
 ulyaothpackage=""

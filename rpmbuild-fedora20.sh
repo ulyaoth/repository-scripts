@@ -48,6 +48,7 @@ function build-package ()
 function scp-package ()
 {
   scp -oStrictHostKeyChecking=no -i rpmbuild-old-openssl.pem ulyaoth@$ip:/home/ulyaoth/rpmbuild/RPMS/x86_64/*debug*.rpm /Users/sbagmeijer/rpmbuild/rpms/fedora/20/x86_64/debug/ >> /dev/null 2>&1
+  /usr/bin/ssh -t -oStrictHostKeyChecking=no -i rpmbuild.pem ulyaoth@$ip "rm -rf /home/ulyaoth/rpmbuild/RPMS/x86_64/*debug*.rpm && rm -rf /home/ulyaoth/rpmbuild/RPMS/x86_64/*debuginfo*.rpm" >> /dev/null 2>&1
   scp -oStrictHostKeyChecking=no -i rpmbuild-old-openssl.pem ulyaoth@$ip:/home/ulyaoth/rpmbuild/RPMS/x86_64/*.rpm /Users/sbagmeijer/rpmbuild/rpms/fedora/20/x86_64/os/ >> /dev/null 2>&1
   scp -oStrictHostKeyChecking=no -i rpmbuild-old-openssl.pem ulyaoth@$ip:/home/ulyaoth/rpmbuild/RPMS/noarch/*.rpm /Users/sbagmeijer/rpmbuild/rpms/fedora/20/x86_64/os/ >> /dev/null 2>&1
   scp -oStrictHostKeyChecking=no -i rpmbuild-old-openssl.pem ulyaoth@$ip:/home/ulyaoth/rpmbuild/SRPMS/*.rpm /Users/sbagmeijer/rpmbuild/rpms/fedora/20/source/ >> /dev/null 2>&1
