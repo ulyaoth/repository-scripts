@@ -18,23 +18,13 @@ EOF
 startbuild()
 {
   /bin/bash rpmbuild-amazonlinux.sh -i $instance_type -p $package -u $ulyaothpackage -o $ownersid & >> /dev/null 2>&1
-  /bin/bash rpmbuild-redhat6.sh -i $instance_type -p $package -u $ulyaothpackage -o $ownersid & >> /dev/null 2>&1
   /bin/bash rpmbuild-redhat7.sh -i $instance_type -p $package -u $ulyaothpackage -o $ownersid & >> /dev/null 2>&1
-  /bin/bash rpmbuild-centos6.sh -i $instance_type -p $package -u $ulyaothpackage -o $ownersid & >> /dev/null 2>&1
   /bin/bash rpmbuild-centos7.sh -i $instance_type -p $package -u $ulyaothpackage -o $ownersid & >> /dev/null 2>&1
-  /bin/bash rpmbuild-oraclelinux6.sh -i $instance_type -p $package -u $ulyaothpackage -o $ownersid & >> /dev/null 2>&1
   /bin/bash rpmbuild-oraclelinux7.sh -i $instance_type -p $package -u $ulyaothpackage -o $ownersid & >> /dev/null 2>&1
-  /bin/bash rpmbuild-scientificlinux6.sh -i $instance_type -p $package -u $ulyaothpackage -o $ownersid & >> /dev/null 2>&1
   /bin/bash rpmbuild-scientificlinux7.sh -i $instance_type -p $package -u $ulyaothpackage -o $ownersid & >> /dev/null 2>&1
-  /bin/bash rpmbuild-fedora19.sh -i $instance_type -p $package -u $ulyaothpackage -o $ownersid & >> /dev/null 2>&1
-  /bin/bash rpmbuild-fedora20.sh -i $instance_type -p $package -u $ulyaothpackage -o $ownersid & >> /dev/null 2>&1
-  /bin/bash rpmbuild-fedora21.sh -i $instance_type -p $package -u $ulyaothpackage -o $ownersid & >> /dev/null 2>&1
-  /bin/bash rpmbuild-fedora22.sh -i $instance_type -p $package -u $ulyaothpackage -o $ownersid & >> /dev/null 2>&1
-  /bin/bash rpmbuild-fedora23.sh -i $instance_type -p $package -u $ulyaothpackage -o $ownersid & >> /dev/null 2>&1
-  /bin/bash rpmbuild-fedora24.sh -i $instance_type -p $package -u $ulyaothpackage -o $ownersid & >> /dev/null 2>&1
-  /bin/bash rpmbuild-fedora25.sh -i $instance_type -p $package -u $ulyaothpackage -o $ownersid & >> /dev/null 2>&1
   /bin/bash rpmbuild-fedora26.sh -i $instance_type -p $package -u $ulyaothpackage -o $ownersid & >> /dev/null 2>&1
   /bin/bash rpmbuild-fedora27.sh -i $instance_type -p $package -u $ulyaothpackage -o $ownersid & >> /dev/null 2>&1
+  /bin/bash rpmbuild-fedora28.sh -i $instance_type -p $package -u $ulyaothpackage -o $ownersid & >> /dev/null 2>&1
 }
 
 # Set required variables.
